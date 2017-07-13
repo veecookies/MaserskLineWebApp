@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MaerskLineWebApp.Models.ShippingSchedule>
+
+@{
+    ViewBag.Title = "Shipping Schedule Page";
+}
+
+<h2>Shipping Schedules</h2>
+<br>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Container.Container_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ship.Ship_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipyard1.Shipyard_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipyard2.Shipyard_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Charges)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departure_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arrival_Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Container.Container_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ship.Ship_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shipyard1.Shipyard_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shipyard2.Shipyard_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Charges)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departure_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Arrival_Date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShippingScheduleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShippingScheduleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShippingScheduleID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    <button class="btn btn-default">@Html.ActionLink("Create New", "Create")</button>
+</p>

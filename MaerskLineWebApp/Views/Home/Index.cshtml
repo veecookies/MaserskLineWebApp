@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Maersk Line <img src="http://www.asmsshipmanagement.com/images/Web_Images/ship_PNG5415.png" style="height:150px"></h1>
+    <p class="lead">Maersk Line is the global container division and the largest operating unit of the A.P. Moller – Maersk Group, a Danish business conglomerate.
+                    It is the world's largest container shipping company having customers through 374 offices in 116 countries.
+                    It employs approximately 7,000 sea farers and approximately 25,000 land-based people.
+                    Maersk Line operates over 600 vessels and has a capacity of 2.6 million TEU. The company was founded in 1928.</p>
+</div>
+
+<div class="row" style="text-align: -webkit-center;">
+    <div class="col-md-3" style="border: 1px solid darkgrey; border-radius: 7px;">
+        <h3>Manage Ships <img src="http://freevector.co/wp-content/uploads/2011/05/52330-cargo-ship-with-containers-200x200.png" style="height:130px"/></h3>
+        <p><button class="btn btn-default">@Html.ActionLink("View >>", "Index", "Ships")</button></p>
+    </div>
+    <div class="col-md-3" style="border: 1px solid darkgrey; border-radius: 7px;">
+        <h3>Manage Shipyards <img src="http://vignette4.wikia.nocookie.net/empiresandallies/images/0/05/Shipyard_2-icon.png/revision/latest?cb=20110618074354" style="height:130px"/></h3>
+        <p><button class="btn btn-default">@Html.ActionLink("View >>", "Index", "Shipyards")</button></p>
+    </div>
+    <div class="col-md-3" style="border: 1px solid darkgrey; border-radius: 7px;">
+        <h3>Manage Containers <img src="http://icons.iconarchive.com/icons/icons-land/transport/256/Container-icon.png" style="height:130px"/></h3>
+        <p><button class="btn btn-default">@Html.ActionLink("View >>", "Index", "Containers")</button></p>
+    </div>
+    <div class="col-md-3" style="border: 1px solid darkgrey; border-radius: 7px;">
+        <h3>Manage Schedules <img src="http://servicele-teaxrlu.netdna-ssl.com/wp-content/uploads/2017/01/automated-appointment-setting.png" style="height:130px"/></h3>
+        <p><button class="btn btn-default">@Html.ActionLink("View >>", "Index", "ShippingSchedules")</button></p>
+    </div>
+</div>
